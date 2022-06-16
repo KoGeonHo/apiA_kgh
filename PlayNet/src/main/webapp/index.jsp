@@ -9,7 +9,7 @@
 <body>
 	<script>
 		timeSet = setTimeout(function(){
-			
+			location.href="${path}/user/Login.go";
 		}, 3000);
 	</script>
 </body>
