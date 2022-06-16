@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>PlayNet123</title>
+<title>PlayNet</title>
 </head>
 <body>
 	<script>
