@@ -1,0 +1,29 @@
+	#userSearch th {
+		padding:8px;
+	}
+	#userSearch input {
+		width:150px;
+	}
+	#userSearch select {
+		height:25px;
+		width:150px;
+	}
+	
+	#userList table{
+		border-collapse:collapse;
+	}
+	#userList td{
+		text-align:center;
+		border-top:2px solid #fff;
+		height:45px;
+	}
+	#userList th{
+		height:45px;
+	}
+	#userList li{
+		display:inline;
+	}
+	#userList tbody tr:hover{
+		background:white;
+		color:black;
+	}

@@ -1,0 +1,30 @@
+
+	#conSearch th {
+		padding:10px;
+		width:80px;
+	}
+	
+	#conSearch td {
+		width:300px;
+	}
+	#conSearch select {
+		width:120px;
+		height:20px;
+	}
+	#contentsList .con_items{
+		padding:10px;		
+	}
+	
+	#contentsList .con_items:hover {
+		background:gray;
+		border-radius:10px;
+		cursor:pointer;
+	}
+	
+	#contentsList .con_items span{
+		font-size:1.1em;
+	}
+	
+	#contentsList img {
+		border-radius:5px;
+	}
