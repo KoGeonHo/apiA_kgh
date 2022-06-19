@@ -1,0 +1,40 @@
+	.modal{
+		position:fixed;
+		width:100%;
+		height:100%;
+		background:rgba(0,0,0,0.8);
+		top:0;
+		left:0;
+		display:none;		
+	}
+	
+	.modalContent {
+		position:absolute;
+		width:500px;
+		height:300px;
+		background: #fff;
+		border-radius: 20px;
+		left:500px;
+		top:10%;
+		padding:15px;
+	}
+	
+	.modalContent h3{
+		margin:0;
+	}
+	
+	.Poster{
+		line-height: 150px; 
+		vertical-align: middle;
+		width:auto; 
+		height:155px;
+	}
+	
+	.noPoster{
+		line-height:150px; 
+		vertical-align:middle; 
+		display:inline-block; 
+		padding:0 5px; 
+		border:2px solid #000; 
+		border-radius:5px;
+	}

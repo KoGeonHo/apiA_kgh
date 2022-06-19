@@ -1,0 +1,56 @@
+
+	#navigator {
+		float:left; 
+		width:160px; 
+		height:100%; 
+		z-index:1000; 
+		background:black; 
+		position:fixed; 
+		left:-160px; 
+		transition:left 0.5s ease-out;
+	}
+	
+	#navigator ul{
+		list-style:none; padding-inline-start:0px;
+	}
+	
+	#navigator li{
+		font-size:1.2em; padding:15px;
+	}
+	
+	#navigator li:hover {
+		background:white;
+		cursor:pointer;
+		color:black;
+	}
+	
+	.navBtnbox {
+		float:right; 
+		position:relative; 
+		height:100%;
+		width:18px;
+		margin:0px; 
+		line-height:100%;
+		vertical-align:middle;
+	}
+	
+	.navBtn {
+		cursor:pointer;
+		margin:auto; 
+		text-align:center; 
+		height:50px; 
+		width:18px; 
+		background:gray; 
+		border-radius:0 8px 8px 0; 
+		line-height:50px; 
+		vertical-align:middle;
+	}
+	
+	#navBtn {
+		float:right; 
+		position:relative; 
+		height:100%; 
+		color:white; 
+		left:18px; 
+		font-size:0.8em;
+	}
