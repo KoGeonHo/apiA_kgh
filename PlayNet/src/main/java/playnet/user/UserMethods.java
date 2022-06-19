@@ -142,9 +142,10 @@ public class UserMethods {
 	public ArrayList<ContentDetailVo> selContentDetailPopuler(){
 		ArrayList<ContentDetailVo> PopuList = new ArrayList<>();
 		
-		sql = "select cdidx, poster1 from contentDetail a where isRelease = 'Y' and (now() between releaseSdate and date_add(releaseEdate, interval 1 day) ) and a.cateidx in (SELECT cateidx FROM CON_CATEGORY WHERE isuse = 'Y')";
+		sql = "select cdidx, poster1 from contentDetail a where isRelease = 'Y' and (now() between releaseSdate and date_add(releaseEdate, interval 1 day) ) and a.cateidx in (SELECT cateidx FROM con_category WHERE isuse = 'Y')";
 		
-		//System.out.println("123");
+		System.out.println(sql);
+		System.out.println("123");
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -846,6 +847,7 @@ public class UserMethods {
 	}
 	
 	
+	//좋아요 콘텐츠 관리 select
 	public ArrayList<ContentDetailVo> mngLiked(int midx){
 		ArrayList<ContentDetailVo> cdList = new ArrayList<>();
 		sql = "select * from contentDetail a where cdidx in (select cdidx from con_like where midx = ?)";

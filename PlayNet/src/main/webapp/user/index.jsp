@@ -33,7 +33,7 @@ ArrayList<ContentDetailVo> CDList = UM.selContentDetailPopuler();
 			<h2 style="padding:5px;">PlayNet 인기작</h2>
 			<div class="slide" id="slider" style="left:0px;">
 				<% for(ContentDetailVo CDV : CDList){%>
-					<div class="items" 
+				<div class="items" 
 					onclick="javascript:location.href='${path}/user/conViewDetails.go?CdIdx=<%=CDV.getCdIdx()%>'"
 					style="background:url(../images/poster/<%=CDV.getPoster1()%>); background-size:cover;"></div>				
 				<%} %>
