@@ -65,9 +65,9 @@ public class UserQueryAction extends HttpServlet {
 			// -1 : 비밀번호 불일치.
 			// else : 0,-1 이외에는 midx값을 리턴하여 세션처리
 			if(midx == 0) {
-				out.println("<script>alert('가입되지 않은 이메일 주소 입니다.'); history.back();</script>");
+				out.println("<script>alert('가입되지 않은 이메일 주소 입니다.'); location.href='/PlayNet/user/Login.go';</script>");
 			}else if(midx == -1) {
-				out.println("<script>alert('비밀번호가 일치하지 않습니다.'); history.back();</script>");
+				out.println("<script>alert('비밀번호가 일치하지 않습니다.'); location.href='/PlayNet/user/Login.go';</script>");
 			}else {
 				session.setMaxInactiveInterval(60*60);
 				session.setAttribute("midx",midx);

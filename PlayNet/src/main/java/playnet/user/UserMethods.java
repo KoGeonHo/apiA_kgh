@@ -144,8 +144,8 @@ public class UserMethods {
 		
 		sql = "select cdidx, poster1 from contentDetail a where isRelease = 'Y' and (now() between releaseSdate and date_add(releaseEdate, interval 1 day) ) and a.cateidx in (SELECT cateidx FROM con_category WHERE isuse = 'Y')";
 		
-		System.out.println(sql);
-		System.out.println("123");
+		//System.out.println(sql);
+		//System.out.println("123");
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -847,26 +847,30 @@ public class UserMethods {
 	}
 	
 	
-	//좋아요 콘텐츠 관리 select
-	public ArrayList<ContentDetailVo> mngLiked(int midx){
-		ArrayList<ContentDetailVo> cdList = new ArrayList<>();
-		sql = "select * from contentDetail a where cdidx in (select cdidx from con_like where midx = ?)";
 		
-		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, midx);
-			rs = pstmt.executeQuery();
-			while(rs.next()) {
-				
+	//관심 콘텐츠 관리 select
+		public ArrayList<ContentDetailVo> mngFavorite(int midx){
+			ArrayList<ContentDetailVo> cdList = new ArrayList<>();
+			sql = "select cdidx,title,poster1 from contentDetail a where cdidx in (select cdidx from favorite where midx = ?)";
+			
+			try {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, midx);
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					ContentDetailVo CDV = new ContentDetailVo();
+					CDV.setCdIdx(rs.getInt("cdidx"));
+					CDV.setTitle(rs.getString("title"));
+					CDV.setPoster1(rs.getString("poster1"));
+					cdList.add(CDV);
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
 			}
-		}catch(Exception e) {
-			e.printStackTrace();
+			
+			return cdList;
+			
 		}
-		
-		
-		return cdList;
-		
-	}
 }
 
 

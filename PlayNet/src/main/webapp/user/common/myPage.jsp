@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="${ path }/css/nav.css">
 <script src="${ path }/js/jquery-3.6.0.js"></script>
 <script src="${ path }/js/main.js"></script>
+
 <script>
 	let isKM;
 	isKM = 0;
@@ -56,7 +57,6 @@
 	    }, 201);
 	}
 	
-	
 </script>
 <style type="text/css">
     #toggleBG{
@@ -87,7 +87,6 @@
 <body>
 
 <%@ include file="../../common/nav.jsp" %>	
-
 
 <div class="wrap">
 	<%@ include file="../../common/header.jsp" %>	
